@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>.franco</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a data-id="inicio" id="logo" class="logo" href="javascript:void(0);">.franco</a>
+      <div class="nav-menu" style="display: none;">
+        <a data-id="sobre-mi" href="javascript:void(0);">Sobre Mi</a>
+        <a data-id="habilidades" href="javascript:void(0);">Habilidades</a>
+        <a data-id="educacion" href="javascript:void(0);">Educacion</a>
+        <a data-id="contacto" href="javascript:void(0);">Contacto</a>
+      </div>
+      <a id="nav-menu-button" class="nav-menu-button hover-white" href="javascript:void(0);">
+        <ion-icon name="menu-outline"></ion-icon>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio">
+      <h3>Hola, me llamo</h3>
+      <h1>Franco Maldonado</h1>
+      <h2>Soy programador</h2>
+      <span class="btn" onclick="scrollToElement('sobre-mi')">Sobre Mi</span>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="title-container">
+        <i><ion-icon name="help-outline"></ion-icon></i>
+        <h1>Sobre mi</h1>
+        <hr>
+      </div>
+      <img src="img/profile.jpg" alt="">
+      <p>Actualmente estudio la carrera de Técnico Universitario en Informática en la Universidad Nacional General Sarmiento. Orientado al Desarrollo Web con amplios conocimientos tanto en Front-End como en Back-End.<br><br>Mi objetivo principal es lograr desarrollarme profesionalmente en mi sector, buscando oportunidades que me permitan hacerlo, al mismo tiempo que tratare de alinearme a los objetivos de la empresa.</p>
+    </section>
+
+    <section id="habilidades">
+      <div class="title-container">
+        <i><ion-icon name="code-slash-outline"></ion-icon></i>
+        <h1>Habilidades</h1>
+        <hr>
+      </div>
+
+      <h3>Lenguajes de programacion</h3>
+      <ul>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>HTML5, CSS3</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>JavaScript (ES6+)</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>Python</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>Java</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>PHP</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>C#</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>VB.NET</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>C</li>
+      </ul>
+
+      <h3>Bases de datos</h3>
+      <ul>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>Microsoft SQL Server</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>MySQL</li>
+      </ul>
+
+      <h3>Librerias y Frameworks</h3>
+      <ul>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>jQuery</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>Bootstrap</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>ASP.NET MVC</li>
+      </ul>
+
+      <h3>Herramientas</h3>
+      <ul>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>GIT</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>WAMP</li>
+        <li><i><ion-icon name="caret-forward-outline"></i></ion-icon>AJAX</li>
+      </ul>
+    </section>
+
+    <section id="educacion">
+      <div class="title-container">
+        <i><ion-icon name="school-outline"></ion-icon></i>
+        <h1>Educacion</h1>
+        <hr>
+      </div>
+
+      <ul>
+        <li>
+          <i><ion-icon name="caret-forward-outline"></ion-icon></i>
+          <div class="details">
+            <strong>Universidad Nacional General Sarmiento</strong>
+            <span>Tecnico Universitario En Informatica</span>
+            <span>(2020 - En Curso)</span>
+          </div>
+        </li>
+
+        <li>
+          <i><ion-icon name="caret-forward-outline"></ion-icon></i>
+          <div class="details">
+            <strong>Instituto Superior Mariano Moreno</strong>
+            <span>Programador de sistemas interfases graficas</span>
+            <span>(2018 - 2019)</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <div class="title-container">
+        <i><ion-icon name="person-outline"></ion-icon></i>
+        <h1>Contacto</h1>
+        <hr>
+      </div>
+      <ul>
+        <li class="linkedin"><i><ion-icon name="logo-linkedin"></ion-icon></i><a href="http://linkedin.com/in/franco-maldonado-9a98711b2">franco-maldonado-9a98711b2</a></li>
+        <li class="email"><i><ion-icon name="mail-outline"></ion-icon></i><a href="mailto:Sebastian_1410@outlook.com">Sebastian_1410@outlook.com</a></li>
+        <li class="phone"><i><ion-icon name="call-outline"></ion-icon></i>11-7632-1491</li>
+        <li><a class="btn" href="files/CV_Franco_Maldonado.pdf" download="CV_Franco_Maldonado.pdf">Descargar CV</a></li>
+      </ul>
+      
+    </section>
+  </main> 
+
+  <footer></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

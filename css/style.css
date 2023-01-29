@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  font-family: 'Open Sans', sans-serif, Helvetica;
+
+  --c-black: #000000;
+  --c-blue: #14213d;
+  --c-orange: #fca311;
+  --c-gray: #adb5bd;
+  --c-white: #e5e5e5;
+  --c-orange-transparent: rgba(252, 163, 17, 0.2);
+  --fs-xxxl: 72px;
+  --fs-xxl: 48px;
+  --fs-xl: 32px;
+  --fs-lg: 22px;
+  --fs-md: 20px;
+  --fs-sm: 18px;
+  --fs-xs: 16px;
+  --border-radius: 4px;
+  --animation-timing: 500ms;
+}
+
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--c-blue);
+  color: var(--c-gray);
+
+  font-style: italic;
+  font-weight: 300;
+
+  overflow: overlay;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  transition: filter 500ms ease;
+}
+
+ion-icon {
+  margin-bottom: -3px;
+  pointer-events: none;
+}
+
+.btn {
+  padding: 10px 30px;
+  
+  color: var(--c-orange);
+  font-size: var(--fs-md);
+
+  border: 1px solid var(--c-orange);
+  border-radius: var(--border-radius);
+  text-decoration-line: none;
+  -webkit-tap-highlight-color: transparent;
+
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  background-color: var(--c-orange-transparent);
+}
+
+
+
+
+
+/* ___________
+
+    Scrollbar
+   ___________*/
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: gray;
+  border-radius: 10px;
+  border: 4px solid rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+/* __________
+
+    Cabecera
+   __________*/
+header {
+  z-index: 100;
+  position: fixed;
+
+  width: 100%;
+
+  background: transparent;
+}
+
+
+/* ____________
+
+    Navegacion
+   ____________*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  font-size: 20px;
+}
+
+nav a {
+  position: relative;
+  float: left;
+  
+  padding: 14px 16px;
+  text-align: center;
+  
+  color: var(--c-orange);
+  font-weight: bolder;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ______________________
+
+    Logo y boton de menu
+   ______________________ */
+nav > .logo {
+  z-index: 2;
+}
+
+nav > .nav-menu-button {
+  z-index: 1;
+}
+
+
+/* ______
+
+    Menu
+   ______ */
+nav > .nav-menu {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  display: none;
+  width: 30%;
+  height: 100vh;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+  
+  color: black;
+  background: transparent;
+}
+
+
+/* ___________
+
+    Menu Item
+   ___________ */
+nav > .nav-menu > a {
+  font-size: var(--fs-lg);
+}
+
+nav > .nav-menu > a::before {
+  content: "";
+
+  z-index: -1;
+  position: absolute;
+  top: 6.8px;
+  left: 0;
+
+  width: 100%;
+  height: 75%;
+
+  background: var(--c-orange-transparent);
+  border-radius: var(--border-radius);
+
+  transition: transform 200ms ease;
+  transform: scaleX(0);
+}
+
+nav > .nav-menu > a:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+/* ______________________
+
+    Seccion: Por Defecto
+   ______________________*/
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 60%;
+  height: auto;
+
+  padding: 60px 0;
+}
+
+section > .title-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  margin: 10px 0 10px;
+}
+
+section > .title-container > i {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+
+  margin-right: 10px;
+
+  color: var(--c-orange);
+  font-size: var(--fs-xl);
+
+}
+
+section > .title-container > h1 {
+  align-self: center;
+
+  color: var(--c-white);
+  font-size: var(--fs-xl);
+  white-space: nowrap;
+}
+
+section > .title-container > hr {
+  width: 100%;
+  height: 1px;
+  align-self: center;
+
+  margin: 3px 10px 0;
+
+  background: var(--c-gray);
+  border: 0;
+}
+
+section > p {
+  font-size: var(--fs-lg);
+}
+
+
+/* _________________
+
+    Seccion: Inicio
+   _________________*/
+section#inicio {
+  height: 100vh;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  color: var(--c-white);
+}
+
+section#inicio > h1 {
+  color: var(--c-white);
+  font-size: var(--fs-xxl);
+}
+
+section#inicio > h2 {
+  margin-bottom: 20px;
+
+  color: var(--c-gray);
+  font-size: var(--fs-xl);
+  font-weight: normal;
+}
+
+section#inicio > h3 {
+  color: var(--c-orange);
+  font-size: var(--fs-sm);
+  font-weight: normal;
+}
+
+
+/* ___________________
+
+    Seccion: Sobre mi
+   ___________________*/
+section#sobre-mi {
+  align-items: center;
+}
+
+section#sobre-mi > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin: 10px 0 20px;
+}
+
+section#sobre-mi > p {
+  width: 400px;
+  text-align: justify;
+}
+
+
+/* ______________________
+
+    Seccion: Habilidades
+   ______________________*/
+section#habilidades > h3 {
+  color: var(--c-orange);
+  font-size: var(--fs-sm);
+  font-weight: normal
+}
+
+section#habilidades > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 0 0;
+  list-style-type: none;
+}
+
+section#habilidades > ul > li {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+  font-size: var(--fs-md);
+}
+
+section#habilidades ul > li > i {
+  margin-right: 5px;
+
+  font-size: var(--fs-xs);
+}
+
+
+/* ____________________
+
+    Seccion: Educacion
+   ____________________*/
+section#educacion > ul {
+  margin: 10px 0 0;
+  list-style-type: none;
+}
+
+section#educacion > ul > li {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+  padding-left: 10px;
+  
+}
+
+section#educacion > ul > li > i {
+  margin-right: 5px;
+  font-size: var(--fs-xs);
+}
+
+section#educacion > ul > li > .details {
+  display: flex;
+  flex-direction: column;
+
+  font-size: var(--fs-xs);
+}
+
+
+/* ___________________
+
+    Seccion: Contacto
+   ___________________*/
+section#contacto > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+section#contacto > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 0 0 20px 10px;
+
+  font-size: var(--fs-lg);
+
+  transition: color 200ms ease;
+}
+
+section#contacto > ul > li > i {
+  display: flex;
+
+  margin-right: 10px;
+  
+  font-size: var(--fs-lg);
+}
+
+section#contacto > ul > li > a, section#contacto > ul > li > a:visited {
+  color:var(--c-orange);
+}
+
+
+
+
+
+/* ________________________________
+
+    Media Query: Tablets (< 728px)
+   ________________________________*/
+@media only screen and (max-width: 768px) {
+  main {
+    transition: none;
+  }
+
+  nav > .nav-menu {
+    width: 100%;
+  }
+
+  section {
+    width: 90%;
+  }
+  
+  section#inicio {
+    width: auto;
+    padding: 0;
+  }
+}
+
+
+/* __________________________________
+
+    Media Query: Celulares (< 425px)
+   __________________________________*/
+@media only screen and (max-width: 425px) {
+  section > p {
+    font-size: var(--fs-sm);
+    width: 100% !important;
+  }
+
+  section#inicio > h1 {
+    font-size: var(--fs-xl);
+  }
+
+  section#inicio > h2 {
+    font-size: var(--fs-lg);
+  }
+
+  section#habilidades > ul > li {
+    font-size: var(--fs-xs);
+  }
+
+  section#contacto > ul > li {
+    font-size: var(--fs-xs);
+  }
+}
+
+
+
+
+
+/* _________________
+
+    Animaciones
+   _________________*/
+@keyframes slideIn {
+  0% { transform: translateX(200%); }
+  1% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slideOut {
+  0% { transform: translateX(0%); }
+  1% { transform: translateX(0%); }
+  100% { transform: translateX(200%); }
+}
+
+.slideIn {
+  animation: slideIn var(--animation-timing) ease;
+}
+
+.slideOut {
+  animation: slideOut var(--animation-timing) ease;
+}
