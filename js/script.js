@@ -93,27 +93,6 @@ const toggleMenu = () => {
 }
 
 
-const toggleMenu_ORIGINAL = () => {
-  /**
-   * Muestra/Oculta el menu
-   */
-
-  if (navMenu.style.display === "none" || navMenu.style.display === "") {
-    main.style.filter = "blur(5px)";
-    navMenu.style.display = "flex";
-    navMenu.classList.remove("slideOut");
-    navMenu.classList.add("slideIn");
-  } else {
-    main.style.filter = "blur(0px)";
-    navMenu.classList.remove("slideIn");
-    navMenu.classList.add("slideOut");
-    setTimeout(() => {
-      navMenu.style.display = "none";
-    }, animationTime - 50);
-  }
-}
-
-
 const toggleMenuButtonIcon = () => {
   /**
    * Alterna icono de menu
